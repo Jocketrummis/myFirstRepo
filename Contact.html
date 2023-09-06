@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakta oss</title>
+</head>
+
+<body>
+    <h1>Kontakta oss!</h1>
+    <a href="contact.html">Ladda om sidan</a>
+
+    <!-- Elementet form omslutervanligtvis ett antal formulärsfält  -->
+    <form action="contact.html" method="get">
+
+        <!-- elementet input har olika attribut -->
+        <p>
+            <label for="Firstname">Ditt förnamn:</label><br>
+            <input type="text" name="Firstname" id="Firstname" placeholder="Ange förnamn">
+        </p>
+        <p>
+            <label>
+                Ditt efternamn: <input type="text" name="lastname" id="lastname">
+            </label>
+        </p>
+
+
+        <!-- en knapp för att skicka formulärsfält -->
+        <input type="submit" value="Skicka">
+
+
+
+
+
+    </form>
+
+    <hr>
+    <!-- skapa ett formulär där man kan ange e-post och lösenord -->
+
+    <!-- Ett formulär bör skickas med metoden "post" istället för "get" -->
+    <!-- metoden get get url där formulärfält med dess värde visas i  -->
+    <!-- tillägget Live server i Visual Studio Code ger ett 405 fel om method="post" används -->
+
+    <form action="contact.html" method="post">
+        <p>
+            <label>
+
+               Ange epost: <input type="email" name="E-mail" id="E-mail">
+            </label>
+        </p>
+
+        <p>
+            <label>
+
+                Ange lösenord: <input type="password" name="password" id="password" placeholder="Ange Lösenord">
+            </label>
+        </p>
+
+        <button>Logga in</button>
+
+
+
+    </form>
+
+    <!-- formulär för att hantera flervalsfråga ex ange intresse -->
+
+
+    <form action="contact.html" method="get">
+        <!-- element fieldset kan gruppera flera val -->
+        <fieldset>
+            <legend>Ange favorit spel - du kan makera flera</legend>
+            <label>Ange favorit spel
+
+                <!-- input checkbox - flervalsfråga -->
+
+                <input type="checkbox" name="leagueofledgends" id="leaugeofledgens"> League of Legends
+            </label>
+            <br>
+
+            <label>Ange favorit spel
+
+                <!-- input checkbox - flervalsfråga -->
+
+                <input type="checkbox" name="Flightsimulator" id=""> Flightsimulator
+            </label>
+            <br>
+
+
+            <label>Ange favorit spel
+
+                <!-- input checkbox - flervalsfråga -->
+
+                <input type="checkbox" name="Fifa" id="Fifa"> Fifa
+            </label>
+            <br>
+        </fieldset>
+
+        <!-- ange en fråga där endast ett svar är rätt: input type="radio" -->
+        <!-- se till att använda attributet value som anger själva värdet -->
+        <fieldset>
+            <legend>Ange din spelnivå (generellt)</legend>
+
+            <Label>
+                <input type="radio" name="level" id="beginner" value="beginner"> Beginner
+            </Label>
+            <br>
+
+            <Label>
+                <input type="radio" name="level" id="good" value="Good"> Good
+            </Label>
+            <br>
+
+            <Label>
+                <input type="radio" name="level" id="pro" value="Pro"> Pro
+            </Label>
+            <br>
+
+
+        </fieldset>
+
+        <!-- elementet select skapar en lista. Där varje val elementet option -->
+
+        <fieldset>
+            <legend>När på dygnet är du bäst</legend>
+
+            <select name="hours" id="hours">
+                <option value="7012">07:00 - 12:00</option>
+                <option value="12_18">12:00 - 18:00</option>
+                <option value="18_24">18:00 - 24:00</option>
+            </select>
+
+        </fieldset>
+
+        <input type="submit" value="Skicka">
+
+    </form>
+
+
+
+</body>
+
+</html>
